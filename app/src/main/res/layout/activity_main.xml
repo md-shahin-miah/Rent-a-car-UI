@@ -7,11 +7,15 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:theme="@style/AppTheme.AppBarOverlay"
-        app:elevation="0dp">
+        app:elevation="0dp"
+
+
+        >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -29,16 +33,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="8dp"
+
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/calibri"
-                        android:text="Explore"
+                        android:text="Hello, Milisa"
                         android:textColor="#000000"
                         android:textSize="24sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+
+
+                        />
 
                     <ImageView
                         android:layout_width="36dp"
@@ -85,31 +95,45 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="@color/teal_200"
-
+            app:tabIndicatorColor="@null"
+            app:tabGravity="fill"
+            app:tabTextAppearance="@style/MyCustomTabTextAppearance"
+            app:tabSelectedTextColor="#000000"
+            app:tabTextColor="#9ea1b0"
             >
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem"
+                android:id="@+id/tabItemCars"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cricket" />
+                android:text="Cars"
+                />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem2"
+                android:id="@+id/tabItemTrucks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Winter" />
+                android:text="Trucks" />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem3"
+                android:id="@+id/tabItemScooter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Doctor" />
+                android:text="Scooters" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabItemHelicopters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Helicopters" />
 
         </com.google.android.material.tabs.TabLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 </RelativeLayout>

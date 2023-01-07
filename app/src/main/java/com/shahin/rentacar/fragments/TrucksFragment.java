@@ -2,22 +2,23 @@ package com.shahin.rentacar.fragments;
 
 
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import in.shahin.tablayoutsample.R;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
+import com.shahin.rentacar.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CricketFragment extends Fragment {
+public class TrucksFragment extends Fragment {
 
 
-    public CricketFragment() {
+    public TrucksFragment() {
         // Required empty public constructor
     }
 
@@ -26,7 +27,7 @@ public class CricketFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cricket, container, false);
+        return inflater.inflate(R.layout.fragment_trucks, container, false);
     }
 
 }

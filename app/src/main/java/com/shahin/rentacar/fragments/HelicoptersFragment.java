@@ -8,16 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import in.shahin.tablayoutsample.R;
+import com.shahin.rentacar.R;
+
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DoctorFragment extends Fragment {
+public class HelicoptersFragment extends Fragment {
 
 
-    public DoctorFragment() {
+    public HelicoptersFragment() {
         // Required empty public constructor
     }
 
@@ -26,7 +27,7 @@ public class DoctorFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_doctor, container, false);
+        return inflater.inflate(R.layout.fragment_helicopter, container, false);
     }
 
 }

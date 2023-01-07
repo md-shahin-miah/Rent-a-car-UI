@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/RentaCar/app/src/main/res/drawable/gray_rounded_shape.xml" value="0.118" />
         <entry key="..\:/Users/User/AndroidStudioProjects/RentaCar/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/RentaCar/app/src/main/res/layout/fragment_cars.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/RentaCar/app/src/main/res/layout/fragment_cricket.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/RentaCar/app/src/main/res/layout/fragment_doctor.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/RentaCar/app/src/main/res/layout/fragment_helicopter.xml" value="0.2542991141219385" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/RentaCar/app/src/main/res/layout/fragment_winter.xml" value="0.1" />
       </map>
     </option>
   </component>
