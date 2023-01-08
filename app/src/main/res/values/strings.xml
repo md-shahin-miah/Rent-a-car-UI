@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Rent a Car</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_store">Store</string>
+    <string name="menu_notification">Notification</string>
+    <string name="menu_me">Me</string>
 </resources>
