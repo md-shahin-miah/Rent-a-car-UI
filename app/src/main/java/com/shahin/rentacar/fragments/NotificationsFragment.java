@@ -12,9 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.shahin.rentacar.R;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class NotificationsFragment extends Fragment {
 
     View view;

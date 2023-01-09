@@ -97,55 +97,14 @@
 
 
     </com.google.android.material.appbar.AppBarLayout>
-    <RelativeLayout
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/combined_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/app_bar"
-        >
+        />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@null"
-            app:tabSelectedTextColor="#000000"
-            app:tabTextAppearance="@style/MyCustomTabTextAppearance"
-            app:tabTextColor="#9ea1b0">
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItemCars"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cars" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItemTrucks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Trucks" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItemScooter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Scooters" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItemHelicopters"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Helicopters" />
-
-        </com.google.android.material.tabs.TabLayout>
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_below="@+id/tabs"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    </RelativeLayout>
 
 </RelativeLayout>
 
