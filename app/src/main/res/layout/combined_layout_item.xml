@@ -1,200 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="@dimen/_220sdp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:contentPadding="8dp"
+    >
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="220dp"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="4dp"
-        app:contentPadding="8dp">
+        android:orientation="vertical"
+        android:padding="4dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="4dp">
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/lin_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/vehicleName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:fontFamily="@font/calibri"
+                        android:maxLines="2"
+                        android:text="BMW X4 Sports  ffjdsfhdf"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ratingPoint"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/light_orange_rounded_shape"
+                        android:drawableLeft="@drawable/ic_star_yellow_24dp"
+                        android:fontFamily="@font/calibri"
+                        android:padding="6dp"
+                        android:text="4.5"
+                        android:textAlignment="textEnd"
+                        android:textColor="#3F51B5"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin_name"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/calibri"
+                    android:text="2019 • COMFORT CLASS"
+                    android:textColor="#a4a7b5"
+                    android:textSize="14sp" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:orientation="vertical"
-                android:weightSum="10">
+                android:layout_weight="9"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/seat_icon" />
+
+                    <TextView
+                        android:id="@+id/seat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="5"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/gate_icon" />
+
+                    <TextView
+                        android:id="@+id/door"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="4"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/bag_icon" />
+
+                    <TextView
+                        android:id="@+id/bag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="3"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageview_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bmw_car_img" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
 
-                    <LinearLayout
-                        android:id="@+id/lin_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="10">
-
-                        <TextView
-                            android:id="@+id/vehicleName"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="7"
-                            android:fontFamily="@font/calibri"
-                            android:maxLines="2"
-                            android:text="BMW X4 Sports  ffjdsfhdf"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/ratingPoint"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/light_orange_rounded_shape"
-                            android:drawableLeft="@drawable/ic_star_yellow_24dp"
-                            android:fontFamily="@font/calibri"
-                            android:padding="6dp"
-                            android:text="4.5"
-                            android:textAlignment="textEnd"
-                            android:textColor="#3F51B5"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/description"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/lin_name"
-                        android:layout_marginBottom="4dp"
-                        android:fontFamily="@font/calibri"
-                        android:text="2019 • COMFORT CLASS"
-                        android:textColor="#a4a7b5"
-                        android:textSize="14sp" />
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="vertical"
-                    android:layout_weight="4"
                     >
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/amount_tv"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:orientation="horizontal">
+                        android:fontFamily="@font/calibri"
+                        android:text="$210"
+                        android:textColor="#3f9dff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
-                            android:layout_marginRight="4dp"
-                            android:src="@drawable/seat_icon" />
-
-                        <TextView
-                            android:id="@+id/seat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="6dp"
-                            android:fontFamily="@font/calibri"
-                            android:text="5"
-                            android:textColor="#000000"
-                            android:textSize="12sp" />
-
-                        <ImageView
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
-                            android:layout_marginRight="4dp"
-                            android:src="@drawable/gate_icon" />
-
-                        <TextView
-                            android:id="@+id/door"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="6dp"
-                            android:fontFamily="@font/calibri"
-                            android:text="4"
-                            android:textColor="#000000"
-                            android:textSize="12sp" />
-
-                        <ImageView
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
-                            android:layout_marginRight="4dp"
-                            android:src="@drawable/bag_icon" />
-
-                        <TextView
-                            android:id="@+id/bag"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="6dp"
-                            android:fontFamily="@font/calibri"
-                            android:text="3"
-                            android:textColor="#000000"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/imageview_car"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/bmw_car_img" />
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/amount_tv"
+                        android:fontFamily="@font/calibri"
+                        android:text="per day"
+                        android:textColor="#8ac3ff"
+                        android:textSize="14sp" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/book_tv_button"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/blue_rounded_shape"
+                        android:fontFamily="@font/calibri"
+                        android:padding="6dp"
+                        android:text="Book Now"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
-                        >
-
-                        <TextView
-                            android:id="@+id/amount_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
-                            android:text="$210"
-                            android:textColor="#3f9dff"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_toRightOf="@+id/amount_tv"
-                            android:fontFamily="@font/calibri"
-                            android:text="per day"
-                            android:textColor="#8ac3ff"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/book_tv_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:background="@drawable/blue_rounded_shape"
-                            android:fontFamily="@font/calibri"
-                            android:padding="6dp"
-                            android:text="Book Now"
-                            android:textColor="#FFFFFF"
-                            android:textSize="12sp" />
-
-                    </RelativeLayout>
-                </LinearLayout>
-
+                </RelativeLayout>
             </LinearLayout>
-        </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 
-    </androidx.cardview.widget.CardView>
-
-
-</RelativeLayout>
+</androidx.cardview.widget.CardView>
