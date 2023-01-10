@@ -5,20 +5,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.tabs.TabLayout;
 import com.shahin.rentacar.R;
-import com.shahin.rentacar.SectionsPagerAdapter;
 import com.shahin.rentacar.adapters.CombinedAdapter;
+import com.shahin.rentacar.adapters.TendingAdapter;
 import com.shahin.rentacar.models.CombinedVehicle;
+import com.shahin.rentacar.models.RecentlyViewedAdapter;
+import com.shahin.rentacar.models.RecentlyViewedVehicle;
+import com.shahin.rentacar.models.TrendingVehicle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,10 +28,16 @@ public class HomeFragment extends Fragment {
 
     View view;
 
-    RecyclerView recyclerViewCombined;
+    RecyclerView recyclerViewCombined, recyclerViewTrending,recyclerViewRecentlyViewed;
     CombinedAdapter combinedAdapter;
-    List<CombinedVehicle> combinedVehicleList=new ArrayList<>();
-
+    TendingAdapter trendingVehicle;
+    RecentlyViewedAdapter recentlyViewedAdapter;
+    List<CombinedVehicle> combinedVehicleList = new ArrayList<>();
+    List<TrendingVehicle> trendingVehicleList = new ArrayList<>();
+    List<RecentlyViewedVehicle> recentlyViewedVehicleList = new ArrayList<>();
+    LinearLayoutManager linearLayoutManager;
+    LinearLayoutManager linearLayoutManagerTrending;
+    LinearLayoutManager linearLayoutRecentlyViewed;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -46,22 +51,59 @@ public class HomeFragment extends Fragment {
 //        Toolbar toolbar = view.findViewById(R.id.toolbar);
 //        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
-
-        combinedVehicleList.add(new CombinedVehicle("BMW X4 Sports","2019 • COMFORT CLASS","4.5","6","4","3",R.drawable.bmw_car_img,"250"));
-        combinedVehicleList.add(new CombinedVehicle("Vespa Rechargeable","2019 • COMFORT CLASS","4.5","6","4","3",R.drawable.scooter1,"250"));
-        combinedVehicleList.add(new CombinedVehicle("Toyota Corolla","2019 • COMFORT CLASS","4.5","6","4","3",R.drawable.corolla,"250"));
-        combinedVehicleList.add(new CombinedVehicle("2019 • COMFORT CLASS","2019 • COMFORT CLASS","4.5","6","4","3",R.drawable.bmw_car_img,"250"));
-
-
         recyclerViewCombined = view.findViewById(R.id.combined_recyclerView);
+        recyclerViewTrending = view.findViewById(R.id.trending_recyclerView);
+        recyclerViewRecentlyViewed = view.findViewById(R.id.recentlyViewed_recyclerView);
 
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        combinedVehicleList.add(new CombinedVehicle("BMW X4 Sports", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_car_img, "250"));
+        combinedVehicleList.add(new CombinedVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.scooter1, "250"));
+        combinedVehicleList.add(new CombinedVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.corolla, "250"));
+        combinedVehicleList.add(new CombinedVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_car_img, "250"));
+        combinedVehicleList.add(new CombinedVehicle("BMW X4 Sports", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_car_img, "250"));
+        combinedVehicleList.add(new CombinedVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.scooter1, "250"));
+        combinedVehicleList.add(new CombinedVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.corolla, "250"));
+        combinedVehicleList.add(new CombinedVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_car_img, "250"));
+
+
+
+
+
+        linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
         recyclerViewCombined.setLayoutManager(linearLayoutManager);
-        combinedAdapter = new CombinedAdapter(getContext(),combinedVehicleList);
+        combinedAdapter = new CombinedAdapter(getContext(), combinedVehicleList);
         recyclerViewCombined.setAdapter(combinedAdapter);
 
 
+
+
+
+
+        trendingVehicleList.add(new TrendingVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.show_bikes_img, "250"));
+        trendingVehicleList.add(new TrendingVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.car_img, "250"));
+        trendingVehicleList.add(new TrendingVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.boats_img, "250"));
+        trendingVehicleList.add(new TrendingVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.wedding_car_img, "250"));
+        trendingVehicleList.add(new TrendingVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.show_bikes_img, "250"));
+        trendingVehicleList.add(new TrendingVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.car_img, "250"));
+
+
+        linearLayoutManagerTrending = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        recyclerViewTrending.setLayoutManager(linearLayoutManagerTrending);
+        trendingVehicle = new TendingAdapter(getContext(), trendingVehicleList);
+        recyclerViewTrending.setAdapter(trendingVehicle);
+
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_m5_img, "250"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.ford_mustang, "250"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.audi, "250"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.mercedes, "250"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_m5_img, "250"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.audi, "250"));
+
+
+        linearLayoutRecentlyViewed = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        recyclerViewRecentlyViewed.setLayoutManager(linearLayoutRecentlyViewed);
+        recentlyViewedAdapter = new RecentlyViewedAdapter(getContext(), recentlyViewedVehicleList);
+        recyclerViewRecentlyViewed.setAdapter(recentlyViewedAdapter);
 
 
         return view;

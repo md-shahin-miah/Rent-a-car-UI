@@ -29,7 +29,7 @@ public class CombinedAdapter extends RecyclerView.Adapter<CombinedAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.combined_layout_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.combined_layout_item_copy, parent, false);
 
         return new ViewHolder(view);
     }
