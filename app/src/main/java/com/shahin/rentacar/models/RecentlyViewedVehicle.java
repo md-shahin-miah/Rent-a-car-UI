@@ -8,10 +8,10 @@ public class RecentlyViewedVehicle {
     String gate;
     String bag;
     int vehicleImage;
+    int ownerImage;
     String pricePerDay;
 
-
-    public RecentlyViewedVehicle(String vehicleName, String vehicleDescription, String vehicleRating, String seat, String gate, String bag, int vehicleImage, String pricePerDay) {
+    public RecentlyViewedVehicle(String vehicleName, String vehicleDescription, String vehicleRating, String seat, String gate, String bag, int vehicleImage, int ownerImage, String pricePerDay) {
         this.vehicleName = vehicleName;
         this.vehicleDescription = vehicleDescription;
         this.vehicleRating = vehicleRating;
@@ -19,6 +19,7 @@ public class RecentlyViewedVehicle {
         this.gate = gate;
         this.bag = bag;
         this.vehicleImage = vehicleImage;
+        this.ownerImage = ownerImage;
         this.pricePerDay = pricePerDay;
     }
 
@@ -76,6 +77,14 @@ public class RecentlyViewedVehicle {
 
     public void setVehicleImage(int vehicleImage) {
         this.vehicleImage = vehicleImage;
+    }
+
+    public int getOwnerImage() {
+        return ownerImage;
+    }
+
+    public void setOwnerImage(int ownerImage) {
+        this.ownerImage = ownerImage;
     }
 
     public String getPricePerDay() {

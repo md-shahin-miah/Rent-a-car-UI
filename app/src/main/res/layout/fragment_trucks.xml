@@ -3,18 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_surface"
+
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_cars"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_apps_black_24dp"
+            android:layout_height="wrap_content"
+
+
             />
+
+
 
 
     </RelativeLayout>

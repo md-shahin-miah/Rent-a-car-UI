@@ -12,58 +12,57 @@
        android:layout_height="match_parent">
 
 
-       <androidx.appcompat.widget.Toolbar
-           android:id="@+id/toolbar"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           app:popupTheme="@style/AppTheme.PopupOverlay"
-           android:background="@color/teal_200"
-           android:layout_alignParentTop="true"
-           app:theme="@style/AppTheme.Toolbar">
+<!--       <androidx.appcompat.widget.Toolbar-->
+<!--           android:id="@+id/toolbar"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           app:popupTheme="@style/AppTheme.PopupOverlay"-->
+<!--           android:background="@color/teal_200"-->
+<!--           android:layout_alignParentTop="true"-->
+<!--           app:theme="@style/AppTheme.Toolbar">-->
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
+<!--           <LinearLayout-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:orientation="vertical">-->
 
-               <RelativeLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginRight="16dp"
-                   android:layout_marginTop="6dp"
-                   android:layout_marginBottom="8dp"
+<!--               <RelativeLayout-->
+<!--                   android:layout_width="match_parent"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:layout_marginRight="16dp"-->
+<!--                   android:layout_marginTop="6dp"-->
+<!--                   android:layout_marginBottom="8dp"-->
 
-                   >
+<!--                   >-->
 
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:fontFamily="@font/calibri"
-                       android:text="Stores of All vehicle"
-                       android:textColor="#333333"
-                       android:textSize="24sp"
-                       android:textStyle="bold"
-                       android:layout_centerVertical="true"
-                       />
+<!--                   <TextView-->
+<!--                       android:layout_width="wrap_content"-->
+<!--                       android:layout_height="wrap_content"-->
+<!--                       android:fontFamily="@font/calibri"-->
+<!--                       android:text="Stores of All vehicle"-->
+<!--                       android:textColor="#333333"-->
+<!--                       android:textSize="24sp"-->
+<!--                       android:textStyle="bold"-->
+<!--                       android:layout_centerVertical="true"-->
+<!--                       />-->
 
-                   <ImageView
-                       android:layout_width="36dp"
-                       android:layout_height="36dp"
-                       android:layout_alignParentTop="true"
-                       android:layout_alignParentEnd="true"
-                       android:src="@drawable/ic_baseline_more_vert_24" />
+<!--                   <ImageView-->
+<!--                       android:layout_width="36dp"-->
+<!--                       android:layout_height="36dp"-->
+<!--                       android:layout_alignParentTop="true"-->
+<!--                       android:layout_alignParentEnd="true"-->
+<!--                       android:src="@drawable/ic_baseline_more_vert_24" />-->
 
-               </RelativeLayout>
+<!--               </RelativeLayout>-->
 
-           </LinearLayout>
+<!--           </LinearLayout>-->
 
 
-       </androidx.appcompat.widget.Toolbar>
+<!--       </androidx.appcompat.widget.Toolbar>-->
 
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="match_parent"
-           android:layout_below="@+id/toolbar"
            >
 
            <com.google.android.material.tabs.TabLayout
@@ -71,10 +70,12 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                app:tabGravity="fill"
-               app:tabIndicatorColor="@null"
+               app:tabIndicatorColor="@color/md_blue_200"
                app:tabSelectedTextColor="#000000"
+               app:tabRippleColor="@color/md_blue_400"
                app:tabTextAppearance="@style/MyCustomTabTextAppearance"
-               app:tabTextColor="#9ea1b0">
+               app:tabTextColor="#9ea1b0"
+               >
 
                <com.google.android.material.tabs.TabItem
                    android:id="@+id/tabItemCars"
@@ -94,11 +95,11 @@
                    android:layout_height="wrap_content"
                    android:text="Scooters" />
 
-               <com.google.android.material.tabs.TabItem
-                   android:id="@+id/tabItemHelicopters"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Helicopters" />
+<!--               <com.google.android.material.tabs.TabItem-->
+<!--                   android:id="@+id/tabItemHelicopters"-->
+<!--                   android:layout_width="wrap_content"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:text="Helicopters" />-->
 
            </com.google.android.material.tabs.TabLayout>
 

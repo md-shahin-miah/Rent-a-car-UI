@@ -79,10 +79,10 @@ public class HomeFragment extends Fragment {
 
 
 
-        trendingVehicleList.add(new TrendingVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.show_bikes_img, "250"));
+        trendingVehicleList.add(new TrendingVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.wedding_car_img, "250"));
         trendingVehicleList.add(new TrendingVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.car_img, "250"));
         trendingVehicleList.add(new TrendingVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.boats_img, "250"));
-        trendingVehicleList.add(new TrendingVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.wedding_car_img, "250"));
+        trendingVehicleList.add(new TrendingVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.show_bikes_img, "250"));
         trendingVehicleList.add(new TrendingVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.show_bikes_img, "250"));
         trendingVehicleList.add(new TrendingVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.car_img, "250"));
 
@@ -92,12 +92,12 @@ public class HomeFragment extends Fragment {
         trendingVehicle = new TendingAdapter(getContext(), trendingVehicleList);
         recyclerViewTrending.setAdapter(trendingVehicle);
 
-        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_m5_img, "250"));
-        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.ford_mustang, "250"));
-        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.audi, "250"));
-        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.mercedes, "250"));
-        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_m5_img, "250"));
-        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.audi, "250"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Mercedes-Benz SLS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_m5_img,R.drawable.bmw_user_img, "250"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Audi A8 2020", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.ford_mustang,R.drawable.ford_user_img, "240"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("2019 • COMFORT CLASS", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.audi,R.drawable.audi_user_img, "210"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Ford Mustang GT", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.mercedes,R.drawable.mercedes_user_img, "200"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Vespa Rechargeable", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.bmw_m5_img,R.drawable.bmw_m5_img, "270"));
+        recentlyViewedVehicleList.add(new RecentlyViewedVehicle("Toyota Corolla", "2019 • COMFORT CLASS", "4.5", "6", "4", "3", R.drawable.audi,R.drawable.bmw_m5_img, "250"));
 
 
         linearLayoutRecentlyViewed = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);

@@ -28,7 +28,7 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_38sdp"
 
                 >
 
@@ -141,7 +141,7 @@
                 <ImageView
                     android:id="@+id/imageview_car"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_120sdp"
+                    android:layout_height="@dimen/_100sdp"
                     android:layout_marginBottom="2dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/bmw_car_img" />

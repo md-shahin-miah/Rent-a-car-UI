@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.shahin.rentacar.fragments.CarsFragment;
-import com.shahin.rentacar.fragments.HelicoptersFragment;
 import com.shahin.rentacar.fragments.ScootersrFragment;
 import com.shahin.rentacar.fragments.TrucksFragment;
 
@@ -36,14 +35,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 selectedFragment = new CarsFragment();
                 break;
             case 1:
-                selectedFragment = new ScootersrFragment();
-                break;
-            case 2:
                 selectedFragment = new TrucksFragment();
                 break;
-            case 3:
-                selectedFragment = new HelicoptersFragment();
+            case 2:
+                selectedFragment = new ScootersrFragment();
                 break;
+//            case 3:
+//                selectedFragment = new HelicoptersFragment();
+//                break;
         }
         return selectedFragment;
     }
@@ -51,7 +50,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 3 total pages.
-        return 4;
+        return 3;
     }
 
 }
