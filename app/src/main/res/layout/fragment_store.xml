@@ -3,116 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     >
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+           android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_blue_grey_200"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stores of car"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:fontFamily="@font/calibri"
+                    android:textStyle="bold"
+                    />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
 
 
-<!--       <androidx.appcompat.widget.Toolbar-->
-<!--           android:id="@+id/toolbar"-->
-<!--           android:layout_width="match_parent"-->
-<!--           android:layout_height="wrap_content"-->
-<!--           app:popupTheme="@style/AppTheme.PopupOverlay"-->
-<!--           android:background="@color/teal_200"-->
-<!--           android:layout_alignParentTop="true"-->
-<!--           app:theme="@style/AppTheme.Toolbar">-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_cars"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar"
 
-<!--           <LinearLayout-->
-<!--               android:layout_width="match_parent"-->
-<!--               android:layout_height="wrap_content"-->
-<!--               android:orientation="vertical">-->
-
-<!--               <RelativeLayout-->
-<!--                   android:layout_width="match_parent"-->
-<!--                   android:layout_height="wrap_content"-->
-<!--                   android:layout_marginRight="16dp"-->
-<!--                   android:layout_marginTop="6dp"-->
-<!--                   android:layout_marginBottom="8dp"-->
-
-<!--                   >-->
-
-<!--                   <TextView-->
-<!--                       android:layout_width="wrap_content"-->
-<!--                       android:layout_height="wrap_content"-->
-<!--                       android:fontFamily="@font/calibri"-->
-<!--                       android:text="Stores of All vehicle"-->
-<!--                       android:textColor="#333333"-->
-<!--                       android:textSize="24sp"-->
-<!--                       android:textStyle="bold"-->
-<!--                       android:layout_centerVertical="true"-->
-<!--                       />-->
-
-<!--                   <ImageView-->
-<!--                       android:layout_width="36dp"-->
-<!--                       android:layout_height="36dp"-->
-<!--                       android:layout_alignParentTop="true"-->
-<!--                       android:layout_alignParentEnd="true"-->
-<!--                       android:src="@drawable/ic_baseline_more_vert_24" />-->
-
-<!--               </RelativeLayout>-->
-
-<!--           </LinearLayout>-->
-
-
-<!--       </androidx.appcompat.widget.Toolbar>-->
-
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           >
-
-           <com.google.android.material.tabs.TabLayout
-               android:id="@+id/tabs"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               app:tabGravity="fill"
-               app:tabIndicatorColor="@color/md_blue_200"
-               app:tabSelectedTextColor="#000000"
-               app:tabRippleColor="@color/md_blue_400"
-               app:tabTextAppearance="@style/MyCustomTabTextAppearance"
-               app:tabTextColor="#9ea1b0"
-               >
-
-               <com.google.android.material.tabs.TabItem
-                   android:id="@+id/tabItemCars"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Cars" />
-
-               <com.google.android.material.tabs.TabItem
-                   android:id="@+id/tabItemTrucks"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Trucks" />
-
-               <com.google.android.material.tabs.TabItem
-                   android:id="@+id/tabItemScooter"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Scooters" />
-
-<!--               <com.google.android.material.tabs.TabItem-->
-<!--                   android:id="@+id/tabItemHelicopters"-->
-<!--                   android:layout_width="wrap_content"-->
-<!--                   android:layout_height="wrap_content"-->
-<!--                   android:text="Helicopters" />-->
-
-           </com.google.android.material.tabs.TabLayout>
-
-           <androidx.viewpager.widget.ViewPager
-               android:id="@+id/container"
-               android:layout_width="match_parent"
-               android:layout_below="@+id/tabs"
-               android:layout_height="match_parent"
-               app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-       </RelativeLayout>
+            />
 
 
 
-   </RelativeLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>

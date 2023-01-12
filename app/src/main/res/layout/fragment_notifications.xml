@@ -10,14 +10,43 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent">
 
-       <ImageView
+       <com.google.android.material.appbar.AppBarLayout
+
+           android:id="@+id/app_bar"
            android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:src="@drawable/ic_apps_black_24dp"
+           android:layout_height="wrap_content">
 
+           <androidx.appcompat.widget.Toolbar
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/md_blue_grey_200"
+               >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Stores of car"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/_16sdp"
+                   android:fontFamily="@font/calibri"
+                   android:textStyle="bold"
+                   />
+
+           </androidx.appcompat.widget.Toolbar>
+
+       </com.google.android.material.appbar.AppBarLayout>
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerview_order"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:clipToPadding="false"
+           android:paddingStart="5dp"
+           android:paddingTop="5dp"
+           android:paddingEnd="5dp"
+           android:layout_below="@+id/app_bar"
            />
-
-
 
 
    </RelativeLayout>
