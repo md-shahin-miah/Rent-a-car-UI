@@ -43,7 +43,10 @@
                      android:layout_marginTop="6dp"
                      android:layout_marginRight="16dp"
                      android:layout_marginBottom="4dp"
-
+                     android:paddingTop="@dimen/_4sdp"
+                     android:paddingBottom="@dimen/_4sdp"
+                     android:paddingLeft="@dimen/_8sdp"
+                     android:paddingRight="@dimen/_8sdp"
                      >
 
                      <TextView
@@ -54,7 +57,7 @@
                          android:textColor="#000000"
                          android:textSize="24sp"
                          android:textStyle="bold"
-
+                         android:layout_centerVertical="true"
 
                          />
 

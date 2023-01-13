@@ -19,18 +19,67 @@
            <androidx.appcompat.widget.Toolbar
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:background="@color/md_blue_grey_200"
+               android:background="@color/color_blue_custom"
                >
 
-               <TextView
-                   android:layout_width="wrap_content"
+               <RelativeLayout
+                   android:id="@+id/topbar"
+                   android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:text="Stores of car"
-                   android:textColor="@color/white"
-                   android:textSize="@dimen/_16sdp"
-                   android:fontFamily="@font/calibri"
-                   android:textStyle="bold"
-                   />
+                   android:layout_alignParentTop="true"
+                   android:gravity="center_vertical"
+                   android:padding="10dp">
+
+
+                   <!--        <Space-->
+                   <!--            android:layout_width="wrap_content"-->
+                   <!--            android:layout_height="wrap_content"-->
+                   <!--            android:layout_weight="1" />-->
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="All notifications"
+                       android:textColor="@color/white"
+                       android:textSize="20sp"
+                       android:textStyle="bold"
+                       android:layout_alignParentStart="true"
+                       android:layout_centerVertical="true"
+
+                       />
+
+                   <!--        <Space-->
+                   <!--            android:layout_width="wrap_content"-->
+                   <!--            android:layout_height="wrap_content"-->
+                   <!--            android:layout_weight="1" />-->
+
+                   <RelativeLayout
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       android:layout_alignParentEnd="true"
+                       >
+
+                       <ImageView
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:layout_centerInParent="true"
+                           android:padding="6dp"
+                           android:src="@drawable/ic_notifications_white_24dp" />
+
+                       <ImageView
+                           android:layout_width="20dp"
+                           android:layout_height="20dp"
+                           android:layout_alignParentTop="true"
+                           android:layout_alignParentEnd="true"
+                           android:layout_marginStart="8dp"
+                           android:layout_marginTop="8dp"
+                           android:layout_marginEnd="8dp"
+                           android:layout_marginBottom="8dp"
+                           android:padding="4dp"
+                           android:src="@drawable/circleyellowfil" />
+                   </RelativeLayout>
+
+               </RelativeLayout>
 
            </androidx.appcompat.widget.Toolbar>
 
