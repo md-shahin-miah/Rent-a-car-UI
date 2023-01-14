@@ -7,7 +7,6 @@
 #
 <img src="https://user-images.githubusercontent.com/68494371/212402819-98649014-3d51-4ca4-8c37-5bf82081b8ff.png" alt="alt home" style="width:40%;height:100">
 #
-<img src="https://user-images.githubusercontent.com/68494371/212402830-27dd372f-b263-49ad-8e53-c2b0f4066cd8.png" alt="alt home" style="width:40%;height:100">
 #
 <img src="https://user-images.githubusercontent.com/68494371/212402789-fac71952-d24c-4b1c-aa04-3dda043dd22c.png" alt="alt home" style="width:40%;height:100">
 #
